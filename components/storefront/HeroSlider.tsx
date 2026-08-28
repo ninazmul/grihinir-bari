@@ -58,21 +58,21 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#1D4D4F] border-b border-[#EADFCF]">
-      {/* Hero Container */}
-      <div className="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] flex items-center justify-center">
+      {/* Hero Container: Fixed uniform height across all slides to prevent height jumping */}
+      <div className="relative w-full h-[540px] sm:h-[600px] md:h-[640px] lg:h-[700px] flex items-center justify-center overflow-hidden">
         
         {/* Background Image Carousel Layer */}
         {activeSlides.map((s, idx) => (
           <div
             key={s._id || idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
               idx === current ? "opacity-100 z-0" : "opacity-0 pointer-events-none"
             }`}
           >
             <img
               src={s.backgroundImage}
               alt={s.title}
-              className="w-full h-full object-cover object-center filter brightness-95 contrast-105 transform scale-100 transition-transform duration-10000 ease-out"
+              className="w-full h-full object-cover object-center filter brightness-95 contrast-105"
             />
 
             {/* Smart Gradient Overlays: keeps background photo vivid and visible while ensuring crisp text readability */}
@@ -92,13 +92,13 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-serif text-white tracking-tight leading-[1.15] drop-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-serif text-white tracking-tight leading-[1.15] drop-shadow-lg line-clamp-2">
               {slide.title}
             </h1>
 
             {/* Subtitle */}
             {slide.subtitle && (
-              <p className="text-base sm:text-lg lg:text-xl text-gray-100 font-normal leading-relaxed max-w-2xl drop-shadow-md">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-100 font-normal leading-relaxed max-w-2xl drop-shadow-md line-clamp-2 sm:line-clamp-3">
                 {slide.subtitle}
               </p>
             )}
