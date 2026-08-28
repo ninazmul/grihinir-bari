@@ -5,7 +5,7 @@ export * from "@/lib/actions/setting.actions";
 export * from "@/lib/actions/media.actions";
 export * from "@/lib/actions/contact.actions";
 
-// QORVAN Storefront & E-Commerce Modules
+// Grihinir Bari Storefront & E-Commerce Modules
 export * from "@/lib/actions/hero.actions";
 export * from "@/lib/actions/category.actions";
 export * from "@/lib/actions/collection.actions";

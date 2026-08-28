@@ -124,7 +124,7 @@ export default function OrdersClient({
       <div className="border-b border-zinc-200 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black text-gray-900">Orders Management</h1>
-          <p className="text-xs text-zinc-500">Track &amp; fulfill QORVAN customer orders</p>
+          <p className="text-xs text-zinc-500">Track &amp; fulfill Grihinir Bari customer orders</p>
         </div>
       </div>
 

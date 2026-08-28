@@ -43,7 +43,7 @@ export default async function CustomerOrderConfirmationPage({
             Order Placed Successfully
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold font-serif text-gray-900">
-            Thank You For Choosing QORVAN
+            Thank You For Choosing Grihinir Bari
           </h1>
           <p className="text-xs font-mono font-bold text-gray-600 bg-zinc-100 inline-block px-3 py-1 rounded-full border border-zinc-200">
             Order Ref: #{order.orderNumber}

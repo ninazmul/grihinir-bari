@@ -1,4 +1,4 @@
-// ===== QORVAN E-Commerce & CMS Module & Permission Definitions =====
+// ===== Grihinir Bari E-Commerce & CMS Module & Permission Definitions =====
 
 export const CMS_MODULES = [
   "dashboard",

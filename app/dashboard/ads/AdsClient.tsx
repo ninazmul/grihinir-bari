@@ -412,7 +412,7 @@ export default function AdsClient({ initialCampaigns }: { initialCampaigns: any[
                     <label className="block text-xs font-semibold text-gray-700 mb-1">Primary Text / Description</label>
                     <textarea
                       rows={3}
-                      placeholder="e.g. Elevate your everyday style with QORVAN executive accessories. Order now for free delivery across Dhaka."
+                      placeholder="e.g. খাঁটি কাঠের ঘানিভাঙা সরিষার তেল সরাসরি আপনার দোরগোড়ায়। অর্ডার করুন আজই!"
                       value={newCampaign.creative.description}
                       onChange={(e) =>
                         setNewCampaign({
@@ -431,7 +431,7 @@ export default function AdsClient({ initialCampaigns }: { initialCampaigns: any[
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-6 h-6 rounded-full bg-black text-white text-[10px] font-bold flex items-center justify-center">Q</div>
                         <div>
-                          <p className="text-[11px] font-bold text-gray-900">QORVAN Luxury</p>
+                          <p className="text-[11px] font-bold text-gray-900">Grihinir Bari</p>
                           <p className="text-[9px] text-gray-400">Sponsored</p>
                         </div>
                       </div>

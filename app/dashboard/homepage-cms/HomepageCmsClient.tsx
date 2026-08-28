@@ -61,8 +61,8 @@ export default function HomepageCmsClient({
     setEditingSlide(null);
     setForm({
       ...emptyForm,
-      title: "The Pinnacle of Luxury & Elegance",
-      subtitle: "Explore QORVAN's masterwork of Italian silk tie sets, full-grain executive leather goods, bespoke formal tailoring, and royal haute couture.",
+      title: "১০০% খাঁটি কাঠের ঘানিভাঙা সরষের তেল",
+      subtitle: "গৃহিণীর বাড়ি নিয়ে এসেছে সম্পূর্ণ প্রাকৃতিক, ঝাঁঝালো ও পুষ্টিকর ঘানিভাঙা সরিষার তেল। শতভাগ বিশুদ্ধতার নিশ্চয়তা।",
       backgroundImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600",
       order: String(slides.length),
     });

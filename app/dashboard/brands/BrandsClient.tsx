@@ -190,7 +190,7 @@ export default function BrandsClient({ initialBrands }: { initialBrands: Brand[]
                 <input
                   value={name}
                   onChange={(e) => handleNameChange(e.target.value)}
-                  placeholder="e.g. QORVAN"
+                  placeholder="e.g. Grihinir Bari"
                   className="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black"
                   required
                 />

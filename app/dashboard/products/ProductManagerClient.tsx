@@ -211,7 +211,7 @@ export default function ProductManagerClient({
         title: formData.title,
         slug:
           formData.slug || formData.title.toLowerCase().replace(/\s+/g, "-"),
-        description: formData.description || "Luxury QORVAN crafted product.",
+        description: formData.description || "১০০% খাঁটি কাঠের ঘানিভাঙা সরিষার তেল।",
         shortDescription: formData.shortDescription,
         price: parseFloat(formData.price) || 0,
         compareAtPrice: formData.compareAtPrice
@@ -250,9 +250,9 @@ export default function ProductManagerClient({
               .filter((c) => c.name)
           : [{ name: "Standard" }],
         specifications: [
-          { key: "Brand", value: "QORVAN Luxury" },
+          { key: "Brand", value: "Grihinir Bari" },
           { key: "Material", value: "Premium Craftsmanship" },
-          { key: "Origin", value: "Handcrafted Luxury" },
+          { key: "Origin", value: "Pure Wooden Ghani" },
         ],
         careInstructions: formData.careInstructions,
         isFeatured: formData.isFeatured,
@@ -522,7 +522,7 @@ export default function ProductManagerClient({
                 <h2 className="text-lg font-bold text-gray-900">
                   {editingProduct
                     ? `Edit Product: ${editingProduct.title}`
-                    : "Create New QORVAN Product"}
+                    : "Create New Product"}
                 </h2>
                 <p className="text-xs text-gray-500">
                   Configure catalog properties, inventory stock, and SEO search

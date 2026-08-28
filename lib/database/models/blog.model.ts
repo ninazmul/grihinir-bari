@@ -28,7 +28,7 @@ const BlogPostSchema = new Schema(
     excerpt: { type: String, required: true },
     content: { type: String, required: true },
     featuredImage: { type: String, required: true },
-    author: { type: String, default: "QORVAN Editorial" },
+    author: { type: String, default: "Grihinir Bari Editorial" },
     category: { type: String, default: "Fashion & Style", index: true },
     tags: [{ type: String }],
     readingTime: { type: String, default: "4 min read" },

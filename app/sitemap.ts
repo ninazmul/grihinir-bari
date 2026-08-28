@@ -8,7 +8,7 @@ import Blog from "@/lib/database/models/blog.model";
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || "https://qorvan.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || "https://grihinirbari.com";
 
   let productUrls: any[] = [];
   let categoryUrls: any[] = [];

@@ -52,7 +52,7 @@ const emptyFormData = {
   title: "",
   slug: "",
   category: "Fashion & Style",
-  author: "QORVAN Editorial",
+  author: "Grihinir Bari Editorial",
   readingTime: "",
   featuredImage: "",
   excerpt: "",
@@ -89,7 +89,7 @@ export default function BlogAdminClient({ initialPosts }: { initialPosts: BlogPo
       title: post.title || "",
       slug: post.slug || "",
       category: post.category || "Fashion & Style",
-      author: post.author || "QORVAN Editorial",
+      author: post.author || "Grihinir Bari Editorial",
       readingTime: post.readingTime || "",
       featuredImage: post.featuredImage || "",
       excerpt: post.excerpt || "",
@@ -125,7 +125,7 @@ export default function BlogAdminClient({ initialPosts }: { initialPosts: BlogPo
       title: form.title.trim(),
       slug: form.slug.trim() || form.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
       category: form.category,
-      author: form.author.trim() || "QORVAN Editorial",
+      author: form.author.trim() || "Grihinir Bari Editorial",
       readingTime: form.readingTime.trim() || undefined,
       featuredImage: form.featuredImage.trim() || "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200",
       excerpt: form.excerpt.trim(),
@@ -473,7 +473,7 @@ export default function BlogAdminClient({ initialPosts }: { initialPosts: BlogPo
                         type="text"
                         value={form.author}
                         onChange={(e) => setForm({ ...form, author: e.target.value })}
-                        placeholder="QORVAN Editorial"
+                        placeholder="Grihinir Bari Editorial"
                         className="w-full p-2 border border-gray-300 rounded-lg"
                       />
                     </div>

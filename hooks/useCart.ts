@@ -20,7 +20,7 @@ export function useCart() {
   useEffect(() => {
     const loadCart = () => {
       try {
-        const saved = localStorage.getItem("qorvan_cart");
+        const saved = localStorage.getItem("grihinir_cart");
         if (saved) setCart(JSON.parse(saved));
       } catch (err) {
         console.error(err);
@@ -28,14 +28,14 @@ export function useCart() {
     };
 
     loadCart();
-    window.addEventListener("qorvan_cart_updated", loadCart);
-    return () => window.removeEventListener("qorvan_cart_updated", loadCart);
+    window.addEventListener("grihinir_cart_updated", loadCart);
+    return () => window.removeEventListener("grihinir_cart_updated", loadCart);
   }, []);
 
   const saveCart = (items: CartItem[]) => {
     setCart(items);
-    localStorage.setItem("qorvan_cart", JSON.stringify(items));
-    window.dispatchEvent(new Event("qorvan_cart_updated"));
+    localStorage.setItem("grihinir_cart", JSON.stringify(items));
+    window.dispatchEvent(new Event("grihinir_cart_updated"));
   };
 
   const addToCart = (item: CartItem) => {

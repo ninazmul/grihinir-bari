@@ -65,10 +65,10 @@ export default function MaintenancePage() {
         >
           Need help? Contact us at{" "}
           <a
-            href="mailto:info@qorvan.vercel.app"
+            href="mailto:grihinirbari@gmail.com"
             className="text-blue-600 underline"
           >
-            info@qorvan.vercel.app
+            grihinirbari@gmail.com
           </a>
         </motion.p>
       </motion.div>

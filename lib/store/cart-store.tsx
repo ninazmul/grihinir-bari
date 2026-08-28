@@ -31,7 +31,7 @@ interface CartContextType {
 }
 
 // ─── Storage Key ─────────────────────────────────────────────
-const CART_KEY = "qorvan_cart";
+const CART_KEY = "grihinir_cart";
 
 function loadCart(): CartItem[] {
   if (typeof window === "undefined") return [];

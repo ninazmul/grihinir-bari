@@ -73,7 +73,7 @@ export default function CategoriesClient({ initialCategories }: { initialCategor
     <div className="space-y-6 pb-10">
       <div className="border-b pb-4">
         <h1 className="text-2xl font-bold text-gray-900">Categories Management</h1>
-        <p className="text-xs text-gray-500">Organize QORVAN luxury product categories</p>
+        <p className="text-xs text-gray-500">Organize Grihinir Bari product categories</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

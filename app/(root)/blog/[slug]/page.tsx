@@ -192,7 +192,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostPageProps) 
             <div className="w-8 h-8 rounded-full bg-black text-white font-bold flex items-center justify-center text-xs uppercase shadow-xs">
               {post.author?.charAt(0) || "Q"}
             </div>
-            <span className="font-bold text-gray-900">{post.author || "QORVAN Editorial"}</span>
+            <span className="font-bold text-gray-900">{post.author || "Grihinir Bari Editorial"}</span>
           </div>
 
           <div className="flex items-center gap-1.5">

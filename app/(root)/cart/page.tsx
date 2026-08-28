@@ -15,7 +15,7 @@ export default function CartPage() {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("grihinir_applied_coupon") || localStorage.getItem("qorvan_applied_coupon");
+      const saved = localStorage.getItem("grihinir_applied_coupon");
       if (saved) {
         setAppliedCoupon(JSON.parse(saved));
       }
@@ -49,7 +49,6 @@ export default function CartPage() {
     setAppliedCoupon(null);
     setCouponCode("");
     localStorage.removeItem("grihinir_applied_coupon");
-    localStorage.removeItem("qorvan_applied_coupon");
     toast.success("কুপন সরানো হয়েছে");
   };
 

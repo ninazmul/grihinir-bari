@@ -134,7 +134,7 @@ export default async function BlogIndexPage(props: {
       <section className="bg-gray-50 border-b border-gray-200 py-16 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto space-y-4">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 bg-white border border-gray-200 px-3.5 py-1.5 rounded-full inline-block shadow-xs">
-            The QORVAN Journal
+            Grihinir Bari Journal
           </span>
           <h1 className="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight">
             Style, Heritage & Elegance
@@ -234,7 +234,7 @@ export default async function BlogIndexPage(props: {
                       {featuredPost.author?.charAt(0) || "Q"}
                     </div>
                     <span className="text-xs font-semibold text-gray-300">
-                      {featuredPost.author || "QORVAN Editorial"}
+                      {featuredPost.author || "Grihinir Bari Editorial"}
                     </span>
                   </div>
                   <Link
@@ -327,7 +327,7 @@ export default async function BlogIndexPage(props: {
 
                   <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                     <span className="text-xs font-semibold text-gray-700">
-                      {post.author || "QORVAN Editorial"}
+                      {post.author || "Grihinir Bari Editorial"}
                     </span>
                     <Link
                       href={`/blog/${post.slug}`}

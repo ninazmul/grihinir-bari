@@ -45,7 +45,7 @@ export const connectToDatabase = async () => {
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URI, {
-      dbName: "qorvan",
+      dbName: "grihinirbari",
       bufferCommands: false,
       maxPoolSize: 20,
       minPoolSize: 2,

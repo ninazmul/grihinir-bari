@@ -46,7 +46,7 @@ export default function CouponsClient({ initialCoupons }: { initialCoupons: any[
     <div className="space-y-6 pb-10">
       <div className="border-b pb-4">
         <h1 className="text-2xl font-bold text-gray-900">Discount Coupons Management</h1>
-        <p className="text-xs text-gray-500">Create & manage promo codes for QORVAN shoppers</p>
+        <p className="text-xs text-gray-500">Create & manage promo codes for Grihinir Bari shoppers</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -60,7 +60,7 @@ export default function CouponsClient({ initialCoupons }: { initialCoupons: any[
                 required
                 value={code}
                 onChange={(e) => setCode(e.target.value.toUpperCase())}
-                placeholder="e.g. QORVAN10"
+                placeholder="e.g. GRIHINIR10"
                 className="w-full p-2 border rounded-md uppercase font-mono font-bold"
               />
             </div>

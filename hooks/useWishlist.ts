@@ -17,7 +17,7 @@ export function useWishlist() {
   useEffect(() => {
     const load = () => {
       try {
-        const saved = localStorage.getItem("qorvan_wishlist");
+        const saved = localStorage.getItem("grihinir_wishlist");
         if (saved) {
           const parsed = JSON.parse(saved);
           // Support both old format (string[]) and new format (WishlistItem[])
@@ -27,7 +27,7 @@ export function useWishlist() {
             } else if (typeof parsed[0] === "string") {
               // Old format: array of IDs — can't show product info, clear it
               setWishlistItems([]);
-              localStorage.removeItem("qorvan_wishlist");
+              localStorage.removeItem("grihinir_wishlist");
             } else {
               setWishlistItems(parsed as WishlistItem[]);
             }
@@ -39,14 +39,14 @@ export function useWishlist() {
     };
 
     load();
-    window.addEventListener("qorvan_wishlist_updated", load);
-    return () => window.removeEventListener("qorvan_wishlist_updated", load);
+    window.addEventListener("grihinir_wishlist_updated", load);
+    return () => window.removeEventListener("grihinir_wishlist_updated", load);
   }, []);
 
   const saveWishlist = (items: WishlistItem[]) => {
     setWishlistItems(items);
-    localStorage.setItem("qorvan_wishlist", JSON.stringify(items));
-    window.dispatchEvent(new Event("qorvan_wishlist_updated"));
+    localStorage.setItem("grihinir_wishlist", JSON.stringify(items));
+    window.dispatchEvent(new Event("grihinir_wishlist_updated"));
   };
 
   const toggleWishlist = (product: WishlistItem | string) => {

@@ -503,13 +503,13 @@ export default function DashboardOrderDetailClient({
         <div className="pt-8 border-t border-zinc-200 flex justify-between items-end text-xs">
           <div className="text-center space-y-1">
             <div className="w-40 border-b border-black pb-1 text-center font-serif text-zinc-400 italic">
-              QORVAN Audit
+              Grihinir Bari Audit
             </div>
             <p className="text-[10px] uppercase font-bold text-zinc-400">Authorized Signature</p>
           </div>
 
           <div className="text-right text-[10px] text-zinc-400 uppercase tracking-widest space-y-0.5">
-            <p>QORVAN Executive Fashion &amp; Accessories</p>
+            <p>Grihinir Bari Pure Ghani Mustard Oil</p>
             <p>Thank You For Your Purchase!</p>
           </div>
         </div>

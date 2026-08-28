@@ -43,7 +43,7 @@ export default function CheckoutPage() {
 
     // Check for saved coupon from Cart
     try {
-      const savedCoupon = localStorage.getItem("grihinir_applied_coupon") || localStorage.getItem("qorvan_applied_coupon");
+      const savedCoupon = localStorage.getItem("grihinir_applied_coupon");
       if (savedCoupon) {
         setAppliedCoupon(JSON.parse(savedCoupon));
       }
@@ -77,7 +77,6 @@ export default function CheckoutPage() {
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
     localStorage.removeItem("grihinir_applied_coupon");
-    localStorage.removeItem("qorvan_applied_coupon");
     toast.success("কুপন সরানো হয়েছে");
   };
 
@@ -131,7 +130,6 @@ export default function CheckoutPage() {
       if (res.success && res.data) {
         toast.success("অর্ডার সফলভাবে গ্রহণ করা হয়েছে!");
         localStorage.removeItem("grihinir_applied_coupon");
-        localStorage.removeItem("qorvan_applied_coupon");
         clearCart();
         router.push(`/order/${res.data._id}`);
       } else {

@@ -99,13 +99,13 @@ export default async function DashboardOverviewPage() {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-800 tracking-wider uppercase">
             <LayoutDashboard className="w-4 h-4" />
-            QORVAN Executive Dashboard
+            Grihinir Bari Admin Dashboard
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight mt-1">
             Welcome back, {access.name}
           </h1>
           <p className="text-sm text-gray-500 mt-0.5">
-            Luxury E-Commerce sales performance & operations overview.
+            E-Commerce sales performance & operations overview.
           </p>
         </div>
 

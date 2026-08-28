@@ -1,15 +1,15 @@
-# 🏛️ Qorvan
+# 🌾 Grihinir Bari (গৃহিণীর বাড়ি)
 
 <p align="center">
-  <a href="https://www.qorvan.org">
-    <img src="public/favicon.ico" alt="Qorvan Logo" width="80" height="80" />
+  <a href="https://grihinirbari.com">
+    <img src="public/favicon.ico" alt="Grihinir Bari Logo" width="80" height="80" />
   </a>
 </p>
 
-<h3 align="center">Empowering Communities • Driving Social Impact • Transparent Philanthropy</h3>
+<h3 align="center">100% Pure Cold-Pressed Wooden Ghani Mustard Oil • ১০০% খাঁটি কাঠের ঘানিভাঙা সরিষার তেল</h3>
 
 <p align="center">
-  A modern, high-performance web platform and administrative dashboard built for <b>Qorvan</b> using Next.js 16, React 19, TypeScript, Tailwind CSS, MongoDB, and Clerk Auth.
+  A modern, high-performance e-commerce web platform and administrative dashboard built for <b>Grihinir Bari</b> using Next.js 16, React 19, TypeScript, Tailwind CSS, MongoDB, and Clerk Auth.
 </p>
 
 <p align="center">
@@ -46,25 +46,23 @@
 
 ### 🌐 Public Web Portal
 
-- **Dynamic Homepage**: Hero section, mission highlights, key impact metrics, and recent activity feeds.
-- **Projects & Initiatives**: Interactive showcases of ongoing and completed humanitarian projects with dynamic filtering.
-- **Photo & Video Gallery**: Categorized media gallery powered by interactive lightbox & smooth grid layouts.
-- **Volunteer & Career Applications**: Integrated forms allowing users to apply for volunteer positions and careers directly.
-- **News & Announcements**: Dynamic publishing platform for foundation updates, news articles, and press releases.
-- **Contact & Feedback**: Direct contact form with server-side email notifications (`Nodemailer` integration).
-- **Internationalization (i18n)**: Locale-aware routing and multi-language support (`[locale]`).
-- **Responsive & Accessible**: Optimized for mobile, tablet, and desktop viewports with WCAG accessibility standards.
+- **Authentic E-Commerce Storefront**: Product listings, size/variant selector, cart, checkout with Cash on Delivery (COD).
+- **Interactive Bengali Typography & Branding**: Custom Bengali font integration and localization.
+- **Recipe & Blog Showcase**: Articles, cooking tips, health benefits of pure cold-pressed mustard oil.
+- **Customer Reviews & Ratings**: Product reviews and customer feedback.
+- **Fast Search & Coupon System**: Instant search, category filters, and promotional discount codes.
+- **Contact & Inquiries**: Direct contact form with email notifications (`Nodemailer` integration).
+- **Responsive & Accessible**: Optimized for mobile, tablet, and desktop viewports.
 
 ### ⚙️ Admin Management Dashboard
 
-- **Real-Time Analytics & Impact Statistics**: Visualization of key metrics using `Recharts` and `Chart.js`.
-- **Content Management System (CMS)**:
-  - **TipTap Rich Text Editor**: Custom WYSIWYG editor supporting blockquotes, code blocks, highlights, images, and alignments.
-  - Dynamic page creation and custom slug routing.
+- **Real-Time Analytics & Sales Overview**: Visualizations using `Recharts` and order tracking.
+- **Product & Inventory Management**: SKU tracking, stock management, categories, and brands.
+- **Order Processing & Invoicing**: Order fulfillment workflow, delivery charges management, and printable receipts.
+- **Coupons & Promotions**: Discount code generation and subscriber campaign broadcasting.
 - **Media Library Manager**: Centralized asset upload and management using `UploadThing`.
-- **Application Processing**: Management workflows for incoming volunteer and career applications.
-- **User & Permission Control**: Granular permission matrix for managing administrative staff, authors, and moderators.
-- **System Maintenance Toggle**: One-click maintenance mode flag with dynamic middleware routing.
+- **User & Permission Control**: Granular permission matrix for managing administrative staff.
+- **System Maintenance Toggle**: One-click maintenance mode flag.
 
 ---
 
@@ -76,41 +74,30 @@
 | **Styling & UI**         | [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), [Lucide Icons](https://lucide.dev/), [Framer Motion](https://www.framer.com/motion/) |
 | **Database & ORM**       | [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/)                                                                                              |
 | **Authentication**       | [Clerk Auth](https://clerk.com/) (`@clerk/nextjs`)                                                                                                                    |
-| **Rich Text & Media**    | [TipTap Editor](https://tiptap.dev/), [UploadThing](https://uploadthing.com/), `react-fast-marquee`, `embla-carousel`                                                 |
-| **Data Viz & Utilities** | [Recharts](https://recharts.org/), [Chart.js](https://www.chartjs.org/), `jspdf`, `html2canvas`, `qrcode.react`                                                       |
-| **Email & Services**     | [Nodemailer](https://nodemailer.com/), `Axios`, `Zod` validation                                                                                                      |
+| **Media & Storage**      | [UploadThing](https://uploadthing.com/)                                                                                                                               |
+| **Data Viz & Utilities** | [Recharts](https://recharts.org/)                                                                                                                                     |
+| **Email & Services**     | [Nodemailer](https://nodemailer.com/), `Zod` validation                                                                                                               |
 
 ---
 
 ## 📂 Project Architecture
 
 ```
-qorvan/
+grihinir-bari/
 ├── app/                      # Next.js App Router Structure
 │   ├── (auth)/               # Auth routes (Sign-In, Sign-Up)
-│   ├── (root)/               # Main public web pages (Home, Projects, Gallery, Contact)
-│   ├── [locale]/             # i18n dynamic locale routes
-│   ├── api/                  # API endpoints (UploadThing, webhooks, contact)
+│   ├── (root)/               # Main public e-commerce pages (Home, Shop, Blog, Cart, Checkout)
+│   ├── api/                  # API endpoints (UploadThing, webhooks, contact, email)
 │   ├── dashboard/            # Administrative dashboard pages
-│   │   ├── career-applications/
-│   │   ├── contact-messages/
-│   │   ├── gallery/
-│   │   ├── homepage/
-│   │   ├── impact-statistics/
-│   │   ├── media/
-│   │   ├── projects/
-│   │   ├── users/
-│   │   └── volunteer-applications/
 │   ├── globals.css           # Global Tailwind CSS styles
-│   └── layout.tsx            # Master layout wrapper with Clerk Provider
+│   └── layout.tsx            # Master layout wrapper
 ├── components/
-│   ├── shared/               # Reusable shared components (Header, Footer, RichTextEditor, MediaLibrary)
+│   ├── shared/               # Reusable shared components (Header, Footer, ProductCard, MediaLibrary)
 │   └── ui/                   # Radix UI primitives & design tokens
 ├── constants/                # Navigation routes, static links & RBAC permissions
-├── hooks/                    # Custom React hooks
-├── lib/                      # Database connectors (Mongoose), mailer, and utility helpers
-├── messages/                 # i18n translation dictionaries
-├── public/                   # Static public assets, icons, and logos
+├── hooks/                    # Custom React hooks (useCart, useWishlist)
+├── lib/                      # Database connectors (Mongoose), actions, and utility helpers
+├── public/                   # Static public assets, fonts, icons, and logos
 ├── types/                    # TypeScript interfaces & type definitions
 ├── next.config.ts            # Next.js build configuration
 ├── tailwind.config.ts        # Tailwind CSS theme extension
@@ -134,8 +121,8 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ninazmul/qorvan.git
-   cd qorvan
+   git clone https://github.com/ninazmul/grihinir-bari.git
+   cd grihinir-bari
    ```
 
 2. **Install project dependencies:**
@@ -145,7 +132,7 @@ Ensure you have the following installed on your machine:
 
 ### Environment Configuration
 
-Create a `.env.local` file in the root directory by copying `.env.example` or creating it manually:
+Create a `.env.local` file in the root directory:
 
 ```bash
 cp .env.example .env.local
@@ -180,17 +167,17 @@ Populate `.env.local` with your operational API keys and credentials (see [Envir
 | `NEXT_PUBLIC_SERVER_URL`            | Public production URL base                                      |
 | `CONTACT_RECEIVER`                  | Email address receiving contact form submissions                |
 | `EMAIL_USER` / `EMAIL_PASS`         | SMTP email server credentials for outbound messaging            |
-| `SMTP_HOST` / `SMTP_PORT`           | Outbound mail server configuration (`smtp.gmail.com`, `465`)    |
+| `SMTP_HOST` / `SMTP_PORT`           | Outbound mail server configuration (`smtp.gmail.com`, `587`)    |
 
 ---
 
 ## 🛡️ Security & Role-Based Access Control (RBAC)
 
-Qorvan utilizes a robust RBAC architecture:
+Grihinir Bari utilizes a robust RBAC architecture:
 
 - **Authentication**: Secured via Clerk Middleware protecting `/dashboard` and backend API endpoints.
 - **Granular Permissions**: Managed via `constants/permissions.ts` defining user roles (Super Admin, Admin, Content Manager, Editor, Viewer).
-- **Data Protection**: Input validation powered by `Zod` schemas and sanitized rich text rendering to prevent XSS attacks.
+- **Data Protection**: Input validation powered by `Zod` schemas.
 
 ---
 
@@ -210,5 +197,5 @@ In the project directory, you can run:
 ## 📄 License & Authors
 
 - **Author**: Nazmul ([@ninazmul](https://github.com/ninazmul)) - `nazmulsaw@gmail.com`
-- **Organization**: [Qorvan](https://www.qorvan.org)
+- **Organization**: [Grihinir Bari](https://grihinirbari.com)
 - **License**: MIT License

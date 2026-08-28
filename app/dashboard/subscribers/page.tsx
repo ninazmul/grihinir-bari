@@ -601,7 +601,7 @@ export default function SubscribersPage() {
                         type="text"
                         value={promoCode}
                         onChange={(e) => setPromoCode(e.target.value)}
-                        placeholder="e.g. QORVAN20"
+                        placeholder="e.g. GRIHINIR20"
                         className="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-black focus:ring-1 focus:ring-black/10 transition"
                       />
                     </div>

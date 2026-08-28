@@ -14,7 +14,7 @@ export default async function CustomersPage() {
     <div className="space-y-6 pb-10">
       <div className="border-b pb-4">
         <h1 className="text-2xl font-bold text-gray-900">Customer Directory</h1>
-        <p className="text-xs text-gray-500">Registered QORVAN luxury client accounts</p>
+        <p className="text-xs text-gray-500">Registered Grihinir Bari customer accounts</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
