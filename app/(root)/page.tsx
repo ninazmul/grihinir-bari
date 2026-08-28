@@ -7,6 +7,7 @@ import { getApprovedReviews, getProductsForReview } from "@/lib/actions/review.a
 import { getSetting } from "@/lib/actions/setting.actions";
 import ProductCard from "@/components/storefront/ProductCard";
 import TestimonialsSection from "@/components/storefront/TestimonialsSection";
+import HeroSlider from "@/components/storefront/HeroSlider";
 import { ShieldCheck, ArrowRight, Sparkles, Star, Award, Droplets, CheckCircle2, HeartHandshake } from "lucide-react";
 
 export const dynamic = "force-dynamic";
@@ -73,19 +74,8 @@ export default async function HomePage() {
 
   let products = productsRes.success ? productsRes.data : [];
   let categories = categoriesRes.success ? categoriesRes.data : [];
-  const heroSlide = heroSlidesRes.success && heroSlidesRes.data?.length ? heroSlidesRes.data[0] : null;
   const approvedReviews = reviewsRes.success ? reviewsRes.data : [];
   const reviewProducts = reviewProductsRes.success ? reviewProductsRes.data : [];
-
-  const heroTitle = heroSlide?.title || "PURE COLD-PRESSED MUSTARD OIL";
-  const heroSubtitle =
-    heroSlide?.subtitle ||
-    "মাটির সোঁদা গন্ধ আর দেশি সরিষার ঝাঁঝে তৈরি শতভাগ নির্ভেজাল কাঠের ঘানিভাঙা তেল। কোনো কেমিক্যাল বা কৃত্রিম গন্ধ ছাড়া খাঁটি পুষ্টিগুণে ভরপুর।";
-  const heroImage =
-    heroSlide?.backgroundImage ||
-    "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=1600";
-  const heroButtonText = heroSlide?.buttonText || "তেল সংগ্রহ করুন / Shop Now";
-  const heroButtonUrl = heroSlide?.buttonUrl || "/shop";
 
   // Seed sample authentic mustard oil products if database has no products yet
   if (products.length === 0) {
@@ -206,49 +196,8 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageItemListJsonLd) }}
       />
       <div className="space-y-20 pb-20 bg-[#FDFBF7]">
-        {/* Hero Banner Section */}
-        <section className="relative bg-[#1D4D4F] text-white overflow-hidden border-b border-[#EADFCF]">
-          <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Golden Mustard Harvest Field Bangladesh"
-              className="w-full h-full object-cover opacity-35 filter contrast-110 brightness-95"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#163A3C] via-[#1D4D4F]/90 to-transparent" />
-          </div>
-
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36 flex flex-col justify-center min-h-[620px]">
-            <div className="max-w-2xl space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C88A2B]/20 border border-[#C88A2B]/40 text-[#FDE68A] text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-                <Sparkles className="w-4 h-4 text-[#FDE68A]" /> ১০০% খাঁটি কাঠের ঘানিভাঙা তেল (100% Pure Ghani)
-              </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-serif tracking-tight leading-tight text-white">
-                খাঁটি কাঠের ঘানিভাঙা সরষের তেল <br />
-                <span className="text-[#FDE68A] text-2xl sm:text-4xl lg:text-5xl font-sans font-bold tracking-normal block mt-1">
-                  OUR PURE OILS &amp; HERITAGE
-                </span>
-              </h1>
-              <p className="text-base sm:text-lg text-[#DBEBEB] font-normal leading-relaxed">
-                {heroSubtitle}
-              </p>
-
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link
-                  href={heroButtonUrl}
-                  className="px-8 py-4 bg-[#C88A2B] hover:bg-[#A46B1E] text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition shadow-xl flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  {heroButtonText} <ArrowRight className="w-4 h-4 text-white" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="px-8 py-4 border border-[#FDE68A]/40 text-white font-extrabold text-xs uppercase tracking-widest rounded-xl hover:bg-white/10 transition backdrop-blur-sm"
-                >
-                  আমাদের ঘানি গল্প (Our Story)
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Hero Slider Section */}
+        <HeroSlider slides={heroSlidesRes.data} />
 
         {/* Featured Categories Grid */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">

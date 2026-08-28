@@ -32,7 +32,7 @@ async function seed() {
   }
 
   console.log("Connecting to MongoDB...");
-  await mongoose.connect(uri, { dbName: "grihinirbari" });
+  await mongoose.connect(uri, { dbName: "qorvan" });
   console.log("Connected to MongoDB successfully!");
 
   const userSchema = new mongoose.Schema(
